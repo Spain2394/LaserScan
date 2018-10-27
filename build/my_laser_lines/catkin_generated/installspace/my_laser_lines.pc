@@ -1,0 +1,8 @@
+prefix=/home/parallels/LaserScan/install
+
+Name: my_laser_lines
+Description: Description of my_laser_lines
+Version: 0.0.0
+Cflags: -I/home/parallels/LaserScan/install/include
+Libs: -L/home/parallels/LaserScan/install/lib 
+Requires: roscpp rospy std_msgs message_runtime
