@@ -4,9 +4,13 @@ rosparam set user_sim_time true
 echo "enter bag in rosbags dir:"
 read bagpath
 
+#Enter new terminal for 'rosrun rviz rviz'
+xdotool key ctrl+shift+n
+
 rosbag play $(pwd)/rosbags/$bagpath
 
 echo got your rosbags/$bagpath
+
 
 
 
