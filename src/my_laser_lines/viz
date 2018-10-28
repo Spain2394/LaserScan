@@ -4,9 +4,6 @@ rosparam set user_sim_time true
 echo "enter bag in rosbags dir:"
 read bagpath
 
-#rosbag play rosbags/bagpath --clock
-#rosbag play /home/parallels/LaserScan/src/my_laser_lines/rosbags/bagpath
-
 rosbag play $(pwd)/rosbags/$bagpath
 
 echo got your rosbags/$bagpath
