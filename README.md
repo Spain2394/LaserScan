@@ -1,3 +1,3 @@
 # LaserScan
-Apply split-and-merge algorithm on real range finder data
+Apply split-and-merge algorithm on range finder data
 
