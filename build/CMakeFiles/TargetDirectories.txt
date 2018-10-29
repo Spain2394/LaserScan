@@ -28,6 +28,14 @@
 /home/parallels/LaserScan/build/gtest/gtest/CMakeFiles/gtest_main.dir
 /home/parallels/LaserScan/build/gtest/gtest/CMakeFiles/install/strip.dir
 /home/parallels/LaserScan/build/gtest/gtest/CMakeFiles/install/local.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/rebuild_cache.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/edit_cache.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/list_install_components.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/install.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/_catkin_empty_exported_target.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/install/local.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/install/strip.dir
+/home/parallels/LaserScan/build/a3_world/CMakeFiles/test.dir
 /home/parallels/LaserScan/build/my_laser_lines/CMakeFiles/list_install_components.dir
 /home/parallels/LaserScan/build/my_laser_lines/CMakeFiles/rebuild_cache.dir
 /home/parallels/LaserScan/build/my_laser_lines/CMakeFiles/edit_cache.dir
