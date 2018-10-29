@@ -93,9 +93,9 @@ if __name__ == '__main__':
     #print "scan_topic: {}".format(scan_topic)
     #print "extracted_lines_topic: {}".format(extracted_lines_topic)
 
-    "maximum_range: {}".format(maximum_range)
-    "min_points_per_line: {}".format(min_points_per_line)
-    "orthog_distance_threshold: {}".format(orthog_distance_threshold)
+   #print("maximum_range: {}".format(maximum_range))
+   #print ("min_points_per_line: {}".format(min_points_per_line))
+   #print("orthog_distance_threshold: {}".format(orthog_distance_threshold))
 
     rospy.Subscriber('/base_scan', LaserScan, scan_callback)
     

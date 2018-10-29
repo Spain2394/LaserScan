@@ -5,7 +5,6 @@
     <param name = "maximum_range" type="double" value="10.0"/>
 
     <node pkg="spain_a2" type="extract_all_lines.py" name="extract_all_lines" output="screen"/>
-
     <node pkg="spain_a2" type="display_lines.py" name="display_lines" output="screen">
         <param name="lines_topic" value="/extracted_lines"/>
         <param name="vis_lines_topic" value="/visualization_lines"/>
