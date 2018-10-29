@@ -1,2 +1,2 @@
-a3_world:my_laser_lines
+spain_a2
 -DCATKIN_DEVEL_PREFIX=/home/parallels/LaserScan/devel -DCMAKE_INSTALL_PREFIX=/home/parallels/LaserScan/install -G Unix Makefiles

@@ -117,8 +117,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/parallels/LaserScan/build/gtest/cmake_install.cmake")
-  include("/home/parallels/LaserScan/build/a3_world/cmake_install.cmake")
-  include("/home/parallels/LaserScan/build/my_laser_lines/cmake_install.cmake")
+  include("/home/parallels/LaserScan/build/spain_a2/cmake_install.cmake")
 
 endif()
 

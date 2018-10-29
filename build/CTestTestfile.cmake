@@ -5,5 +5,4 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
-subdirs(a3_world)
-subdirs(my_laser_lines)
+subdirs(spain_a2)
