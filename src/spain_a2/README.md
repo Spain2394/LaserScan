@@ -1,6 +1,6 @@
-#spain_a2 
-##by Allen Spain
-##10/29/2018
+# spain_a2 
+## by Allen Spain
+## 10/29/2018
 
 Application of split-and-merge segmentation algorithm 
 
@@ -8,10 +8,10 @@ Application of split-and-merge segmentation algorithm
  - download spain_a2 and place in ```catkin_ws```
  - navigate to your ```catkin_ws```, and run ```$ source devel/setup.bash```
  - to play a rosbag run ```$./viz``` and enter rosbag name when prompted. 
- - to start nodes run ```$roslaunch my_laser_lines my_extract_all.launch```
+ - to start nodes run ```$roslaunch spain_a2 my_extract_all.launch```
 
 ## Testing
- - run ```roslaunch my_stage_rviz.launch``` to visualize in rviz environment
+ - run ```roslaunch spain_a2 my_stage_rviz.launch``` to visualize in rviz environment
 
 ## Parameters
  - ```/maximum_range``` representing the sensors max range

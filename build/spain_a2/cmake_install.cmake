@@ -33,56 +33,56 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_laser_lines/msg" TYPE FILE FILES
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/spain_a2/msg" TYPE FILE FILES
     "/home/parallels/LaserScan/src/spain_a2/msg/ExtractedLine.msg"
     "/home/parallels/LaserScan/src/spain_a2/msg/ExtractedLines.msg"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_laser_lines/cmake" TYPE FILE FILES "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/my_laser_lines-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/spain_a2/cmake" TYPE FILE FILES "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/spain_a2-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/include/my_laser_lines")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/include/spain_a2")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/share/roseus/ros/my_laser_lines")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/share/roseus/ros/spain_a2")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/share/common-lisp/ros/my_laser_lines")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/share/common-lisp/ros/spain_a2")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/share/gennodejs/ros/my_laser_lines")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/share/gennodejs/ros/spain_a2")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/parallels/LaserScan/devel/lib/python2.7/dist-packages/my_laser_lines")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/parallels/LaserScan/devel/lib/python2.7/dist-packages/spain_a2")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/lib/python2.7/dist-packages/my_laser_lines")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/parallels/LaserScan/devel/lib/python2.7/dist-packages/spain_a2")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/my_laser_lines.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/spain_a2.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_laser_lines/cmake" TYPE FILE FILES "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/my_laser_lines-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/spain_a2/cmake" TYPE FILE FILES "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/spain_a2-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_laser_lines/cmake" TYPE FILE FILES
-    "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/my_laser_linesConfig.cmake"
-    "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/my_laser_linesConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/spain_a2/cmake" TYPE FILE FILES
+    "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/spain_a2Config.cmake"
+    "/home/parallels/LaserScan/build/spain_a2/catkin_generated/installspace/spain_a2Config-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_laser_lines" TYPE FILE FILES "/home/parallels/LaserScan/src/spain_a2/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/spain_a2" TYPE FILE FILES "/home/parallels/LaserScan/src/spain_a2/package.xml")
 endif()
 

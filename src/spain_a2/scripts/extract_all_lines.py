@@ -10,8 +10,8 @@ import math
 from fit_line import fit_line
 
 from sensor_msgs.msg import LaserScan
-from my_laser_lines.msg import ExtractedLine
-from my_laser_lines.msg import ExtractedLines
+from spain_a2.msg import ExtractedLine
+from spain_a2.msg import ExtractedLines
 
 def scan_callback(scan):
     """
@@ -93,7 +93,12 @@ if __name__ == '__main__':
     #print "scan_topic: {}".format(scan_topic)
     #print "extracted_lines_topic: {}".format(extracted_lines_topic)
 
+    "maximum_range: {}".format(maximum_range)
+    "min_points_per_line: {}".format(min_points_per_line)
+    "orthog_distance_threshold: {}".format(orthog_distance_threshold)
+
     rospy.Subscriber('/base_scan', LaserScan, scan_callback)
+    
 
     extracted_publisher = rospy.Publisher('/extracted_lines', ExtractedLines, queue_size=1)
 

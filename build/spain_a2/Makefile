@@ -56,16 +56,6 @@ CMAKE_BINARY_DIR = /home/parallels/LaserScan/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,17 +78,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -109,6 +88,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install
 install: preinstall
@@ -122,16 +112,26 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : test/fast
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,94 +166,94 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_genpy.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_genpy.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_genpy.dir/rule
+spain_a2/CMakeFiles/spain_a2_genpy.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_genpy.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_genpy.dir/rule
 
 # Convenience name for target.
-my_laser_lines_genpy: spain_a2/CMakeFiles/my_laser_lines_genpy.dir/rule
+spain_a2_genpy: spain_a2/CMakeFiles/spain_a2_genpy.dir/rule
 
-.PHONY : my_laser_lines_genpy
+.PHONY : spain_a2_genpy
 
 # fast build rule for target.
-my_laser_lines_genpy/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_genpy.dir/build.make spain_a2/CMakeFiles/my_laser_lines_genpy.dir/build
-.PHONY : my_laser_lines_genpy/fast
+spain_a2_genpy/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_genpy.dir/build.make spain_a2/CMakeFiles/spain_a2_genpy.dir/build
+.PHONY : spain_a2_genpy/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_generate_messages_lisp.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_generate_messages_lisp.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_generate_messages_lisp.dir/rule
+spain_a2/CMakeFiles/spain_a2_generate_messages_py.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_generate_messages_py.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_generate_messages_py.dir/rule
 
 # Convenience name for target.
-my_laser_lines_generate_messages_lisp: spain_a2/CMakeFiles/my_laser_lines_generate_messages_lisp.dir/rule
+spain_a2_generate_messages_py: spain_a2/CMakeFiles/spain_a2_generate_messages_py.dir/rule
 
-.PHONY : my_laser_lines_generate_messages_lisp
+.PHONY : spain_a2_generate_messages_py
 
 # fast build rule for target.
-my_laser_lines_generate_messages_lisp/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_generate_messages_lisp.dir/build.make spain_a2/CMakeFiles/my_laser_lines_generate_messages_lisp.dir/build
-.PHONY : my_laser_lines_generate_messages_lisp/fast
+spain_a2_generate_messages_py/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_generate_messages_py.dir/build.make spain_a2/CMakeFiles/spain_a2_generate_messages_py.dir/build
+.PHONY : spain_a2_generate_messages_py/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_geneus.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_geneus.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_geneus.dir/rule
+spain_a2/CMakeFiles/spain_a2_gennodejs.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_gennodejs.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_gennodejs.dir/rule
 
 # Convenience name for target.
-my_laser_lines_geneus: spain_a2/CMakeFiles/my_laser_lines_geneus.dir/rule
+spain_a2_gennodejs: spain_a2/CMakeFiles/spain_a2_gennodejs.dir/rule
 
-.PHONY : my_laser_lines_geneus
+.PHONY : spain_a2_gennodejs
 
 # fast build rule for target.
-my_laser_lines_geneus/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_geneus.dir/build.make spain_a2/CMakeFiles/my_laser_lines_geneus.dir/build
-.PHONY : my_laser_lines_geneus/fast
+spain_a2_gennodejs/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_gennodejs.dir/build.make spain_a2/CMakeFiles/spain_a2_gennodejs.dir/build
+.PHONY : spain_a2_gennodejs/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_gencpp.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_gencpp.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_gencpp.dir/rule
+spain_a2/CMakeFiles/spain_a2_geneus.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_geneus.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_geneus.dir/rule
 
 # Convenience name for target.
-my_laser_lines_gencpp: spain_a2/CMakeFiles/my_laser_lines_gencpp.dir/rule
+spain_a2_geneus: spain_a2/CMakeFiles/spain_a2_geneus.dir/rule
 
-.PHONY : my_laser_lines_gencpp
+.PHONY : spain_a2_geneus
 
 # fast build rule for target.
-my_laser_lines_gencpp/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_gencpp.dir/build.make spain_a2/CMakeFiles/my_laser_lines_gencpp.dir/build
-.PHONY : my_laser_lines_gencpp/fast
+spain_a2_geneus/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_geneus.dir/build.make spain_a2/CMakeFiles/spain_a2_geneus.dir/build
+.PHONY : spain_a2_geneus/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_generate_messages_py.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_generate_messages_py.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_generate_messages_py.dir/rule
+spain_a2/CMakeFiles/spain_a2_gencpp.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_gencpp.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_gencpp.dir/rule
 
 # Convenience name for target.
-my_laser_lines_generate_messages_py: spain_a2/CMakeFiles/my_laser_lines_generate_messages_py.dir/rule
+spain_a2_gencpp: spain_a2/CMakeFiles/spain_a2_gencpp.dir/rule
 
-.PHONY : my_laser_lines_generate_messages_py
+.PHONY : spain_a2_gencpp
 
 # fast build rule for target.
-my_laser_lines_generate_messages_py/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_generate_messages_py.dir/build.make spain_a2/CMakeFiles/my_laser_lines_generate_messages_py.dir/build
-.PHONY : my_laser_lines_generate_messages_py/fast
+spain_a2_gencpp/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_gencpp.dir/build.make spain_a2/CMakeFiles/spain_a2_gencpp.dir/build
+.PHONY : spain_a2_gencpp/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLines.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLines.dir/rule
-.PHONY : spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLines.dir/rule
+spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLines.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLines.dir/rule
+.PHONY : spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLines.dir/rule
 
 # Convenience name for target.
-_my_laser_lines_generate_messages_check_deps_ExtractedLines: spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLines.dir/rule
+_spain_a2_generate_messages_check_deps_ExtractedLines: spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLines.dir/rule
 
-.PHONY : _my_laser_lines_generate_messages_check_deps_ExtractedLines
+.PHONY : _spain_a2_generate_messages_check_deps_ExtractedLines
 
 # fast build rule for target.
-_my_laser_lines_generate_messages_check_deps_ExtractedLines/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLines.dir/build.make spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLines.dir/build
-.PHONY : _my_laser_lines_generate_messages_check_deps_ExtractedLines/fast
+_spain_a2_generate_messages_check_deps_ExtractedLines/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLines.dir/build.make spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLines.dir/build
+.PHONY : _spain_a2_generate_messages_check_deps_ExtractedLines/fast
 
 # Convenience name for target.
 spain_a2/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
@@ -271,21 +271,6 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_generate_messages.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_generate_messages.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_generate_messages.dir/rule
-
-# Convenience name for target.
-my_laser_lines_generate_messages: spain_a2/CMakeFiles/my_laser_lines_generate_messages.dir/rule
-
-.PHONY : my_laser_lines_generate_messages
-
-# fast build rule for target.
-my_laser_lines_generate_messages/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_generate_messages.dir/build.make spain_a2/CMakeFiles/my_laser_lines_generate_messages.dir/build
-.PHONY : my_laser_lines_generate_messages/fast
-
-# Convenience name for target.
 spain_a2/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : spain_a2/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -301,6 +286,21 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
+spain_a2/CMakeFiles/spain_a2_generate_messages_nodejs.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_generate_messages_nodejs.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+spain_a2_generate_messages_nodejs: spain_a2/CMakeFiles/spain_a2_generate_messages_nodejs.dir/rule
+
+.PHONY : spain_a2_generate_messages_nodejs
+
+# fast build rule for target.
+spain_a2_generate_messages_nodejs/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_generate_messages_nodejs.dir/build.make spain_a2/CMakeFiles/spain_a2_generate_messages_nodejs.dir/build
+.PHONY : spain_a2_generate_messages_nodejs/fast
+
+# Convenience name for target.
 spain_a2/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
 	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : spain_a2/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
@@ -314,6 +314,36 @@ rosgraph_msgs_generate_messages_eus: spain_a2/CMakeFiles/rosgraph_msgs_generate_
 rosgraph_msgs_generate_messages_eus/fast:
 	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make spain_a2/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLine.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLine.dir/rule
+.PHONY : spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLine.dir/rule
+
+# Convenience name for target.
+_spain_a2_generate_messages_check_deps_ExtractedLine: spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLine.dir/rule
+
+.PHONY : _spain_a2_generate_messages_check_deps_ExtractedLine
+
+# fast build rule for target.
+_spain_a2_generate_messages_check_deps_ExtractedLine/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLine.dir/build.make spain_a2/CMakeFiles/_spain_a2_generate_messages_check_deps_ExtractedLine.dir/build
+.PHONY : _spain_a2_generate_messages_check_deps_ExtractedLine/fast
+
+# Convenience name for target.
+spain_a2/CMakeFiles/spain_a2_generate_messages_eus.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_generate_messages_eus.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+spain_a2_generate_messages_eus: spain_a2/CMakeFiles/spain_a2_generate_messages_eus.dir/rule
+
+.PHONY : spain_a2_generate_messages_eus
+
+# fast build rule for target.
+spain_a2_generate_messages_eus/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_generate_messages_eus.dir/build.make spain_a2/CMakeFiles/spain_a2_generate_messages_eus.dir/build
+.PHONY : spain_a2_generate_messages_eus/fast
 
 # Convenience name for target.
 spain_a2/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -421,19 +451,19 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_generate_messages_eus.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_generate_messages_eus.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_generate_messages_eus.dir/rule
+spain_a2/CMakeFiles/spain_a2_generate_messages_cpp.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_generate_messages_cpp.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-my_laser_lines_generate_messages_eus: spain_a2/CMakeFiles/my_laser_lines_generate_messages_eus.dir/rule
+spain_a2_generate_messages_cpp: spain_a2/CMakeFiles/spain_a2_generate_messages_cpp.dir/rule
 
-.PHONY : my_laser_lines_generate_messages_eus
+.PHONY : spain_a2_generate_messages_cpp
 
 # fast build rule for target.
-my_laser_lines_generate_messages_eus/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_generate_messages_eus.dir/build.make spain_a2/CMakeFiles/my_laser_lines_generate_messages_eus.dir/build
-.PHONY : my_laser_lines_generate_messages_eus/fast
+spain_a2_generate_messages_cpp/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_generate_messages_cpp.dir/build.make spain_a2/CMakeFiles/spain_a2_generate_messages_cpp.dir/build
+.PHONY : spain_a2_generate_messages_cpp/fast
 
 # Convenience name for target.
 spain_a2/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
@@ -496,21 +526,6 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_generate_messages_cpp.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_generate_messages_cpp.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-my_laser_lines_generate_messages_cpp: spain_a2/CMakeFiles/my_laser_lines_generate_messages_cpp.dir/rule
-
-.PHONY : my_laser_lines_generate_messages_cpp
-
-# fast build rule for target.
-my_laser_lines_generate_messages_cpp/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_generate_messages_cpp.dir/build.make spain_a2/CMakeFiles/my_laser_lines_generate_messages_cpp.dir/build
-.PHONY : my_laser_lines_generate_messages_cpp/fast
-
-# Convenience name for target.
 spain_a2/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : spain_a2/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -539,6 +554,21 @@ std_msgs_generate_messages_eus: spain_a2/CMakeFiles/std_msgs_generate_messages_e
 std_msgs_generate_messages_eus/fast:
 	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make spain_a2/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+spain_a2/CMakeFiles/spain_a2_generate_messages.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_generate_messages.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_generate_messages.dir/rule
+
+# Convenience name for target.
+spain_a2_generate_messages: spain_a2/CMakeFiles/spain_a2_generate_messages.dir/rule
+
+.PHONY : spain_a2_generate_messages
+
+# fast build rule for target.
+spain_a2_generate_messages/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_generate_messages.dir/build.make spain_a2/CMakeFiles/spain_a2_generate_messages.dir/build
+.PHONY : spain_a2_generate_messages/fast
 
 # Convenience name for target.
 spain_a2/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
@@ -571,6 +601,21 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+spain_a2/CMakeFiles/spain_a2_genlisp.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_genlisp.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_genlisp.dir/rule
+
+# Convenience name for target.
+spain_a2_genlisp: spain_a2/CMakeFiles/spain_a2_genlisp.dir/rule
+
+.PHONY : spain_a2_genlisp
+
+# fast build rule for target.
+spain_a2_genlisp/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_genlisp.dir/build.make spain_a2/CMakeFiles/spain_a2_genlisp.dir/build
+.PHONY : spain_a2_genlisp/fast
+
+# Convenience name for target.
 spain_a2/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : spain_a2/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
@@ -586,34 +631,19 @@ geometry_msgs_generate_messages_nodejs/fast:
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_gennodejs.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_gennodejs.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_gennodejs.dir/rule
+spain_a2/CMakeFiles/spain_a2_generate_messages_lisp.dir/rule:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/spain_a2_generate_messages_lisp.dir/rule
+.PHONY : spain_a2/CMakeFiles/spain_a2_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-my_laser_lines_gennodejs: spain_a2/CMakeFiles/my_laser_lines_gennodejs.dir/rule
+spain_a2_generate_messages_lisp: spain_a2/CMakeFiles/spain_a2_generate_messages_lisp.dir/rule
 
-.PHONY : my_laser_lines_gennodejs
+.PHONY : spain_a2_generate_messages_lisp
 
 # fast build rule for target.
-my_laser_lines_gennodejs/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_gennodejs.dir/build.make spain_a2/CMakeFiles/my_laser_lines_gennodejs.dir/build
-.PHONY : my_laser_lines_gennodejs/fast
-
-# Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_generate_messages_nodejs.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_generate_messages_nodejs.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-my_laser_lines_generate_messages_nodejs: spain_a2/CMakeFiles/my_laser_lines_generate_messages_nodejs.dir/rule
-
-.PHONY : my_laser_lines_generate_messages_nodejs
-
-# fast build rule for target.
-my_laser_lines_generate_messages_nodejs/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_generate_messages_nodejs.dir/build.make spain_a2/CMakeFiles/my_laser_lines_generate_messages_nodejs.dir/build
-.PHONY : my_laser_lines_generate_messages_nodejs/fast
+spain_a2_generate_messages_lisp/fast:
+	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/spain_a2_generate_messages_lisp.dir/build.make spain_a2/CMakeFiles/spain_a2_generate_messages_lisp.dir/build
+.PHONY : spain_a2_generate_messages_lisp/fast
 
 # Convenience name for target.
 spain_a2/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
@@ -630,58 +660,31 @@ geometry_msgs_generate_messages_py/fast:
 	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make spain_a2/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-spain_a2/CMakeFiles/my_laser_lines_genlisp.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/my_laser_lines_genlisp.dir/rule
-.PHONY : spain_a2/CMakeFiles/my_laser_lines_genlisp.dir/rule
-
-# Convenience name for target.
-my_laser_lines_genlisp: spain_a2/CMakeFiles/my_laser_lines_genlisp.dir/rule
-
-.PHONY : my_laser_lines_genlisp
-
-# fast build rule for target.
-my_laser_lines_genlisp/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/my_laser_lines_genlisp.dir/build.make spain_a2/CMakeFiles/my_laser_lines_genlisp.dir/build
-.PHONY : my_laser_lines_genlisp/fast
-
-# Convenience name for target.
-spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLine.dir/rule:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f CMakeFiles/Makefile2 spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLine.dir/rule
-.PHONY : spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLine.dir/rule
-
-# Convenience name for target.
-_my_laser_lines_generate_messages_check_deps_ExtractedLine: spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLine.dir/rule
-
-.PHONY : _my_laser_lines_generate_messages_check_deps_ExtractedLine
-
-# fast build rule for target.
-_my_laser_lines_generate_messages_check_deps_ExtractedLine/fast:
-	cd /home/parallels/LaserScan/build && $(MAKE) -f spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLine.dir/build.make spain_a2/CMakeFiles/_my_laser_lines_generate_messages_check_deps_ExtractedLine.dir/build
-.PHONY : _my_laser_lines_generate_messages_check_deps_ExtractedLine/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... my_laser_lines_genpy"
+	@echo "... spain_a2_genpy"
+	@echo "... spain_a2_generate_messages_py"
+	@echo "... test"
+	@echo "... spain_a2_gennodejs"
 	@echo "... install"
-	@echo "... my_laser_lines_generate_messages_lisp"
-	@echo "... my_laser_lines_geneus"
-	@echo "... my_laser_lines_gencpp"
-	@echo "... my_laser_lines_generate_messages_py"
-	@echo "... _my_laser_lines_generate_messages_check_deps_ExtractedLines"
+	@echo "... spain_a2_geneus"
+	@echo "... spain_a2_gencpp"
+	@echo "... list_install_components"
+	@echo "... _spain_a2_generate_messages_check_deps_ExtractedLines"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... my_laser_lines_generate_messages"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... spain_a2_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... install/local"
+	@echo "... _spain_a2_generate_messages_check_deps_ExtractedLine"
+	@echo "... spain_a2_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
@@ -689,23 +692,20 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... my_laser_lines_generate_messages_eus"
+	@echo "... spain_a2_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... my_laser_lines_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
+	@echo "... spain_a2_generate_messages"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... spain_a2_genlisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... my_laser_lines_gennodejs"
-	@echo "... my_laser_lines_generate_messages_nodejs"
+	@echo "... spain_a2_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... test"
-	@echo "... my_laser_lines_genlisp"
-	@echo "... _my_laser_lines_generate_messages_check_deps_ExtractedLine"
 .PHONY : help
 
 

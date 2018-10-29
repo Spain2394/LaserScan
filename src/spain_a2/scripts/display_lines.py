@@ -13,8 +13,8 @@ from math import *
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import Point
 from std_msgs.msg import ColorRGBA
-from my_laser_lines.msg import ExtractedLine
-from my_laser_lines.msg import ExtractedLines
+from spain_a2.msg import ExtractedLine
+from spain_a2.msg import ExtractedLines
 
 def display_callback(lines):
     """Callback for extracted lines, displayed by publishing to
