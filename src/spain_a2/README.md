@@ -15,9 +15,9 @@ Application of split-and-merge segmentation algorithm
  - run ```roslaunch spain_a2 my_stage_rviz.launch``` to visualize in rviz environment
 
 ## Parameters
- - ```/maximum_range``` representing the sensors max range
- - ```/min_points_per_line``` minimum point required to fit a line
- - ```/orthog_distance_threshold``` threshold used in deciding to split a lane
+ - ```maximum_range``` representing the sensors max range
+ - ```min_points_per_line``` minimum point required to fit a line
+ - ```orthog_distance_threshold``` threshold used in deciding to split a lane
 
 ## Observations
 ### Split-and-Merge Segmentation Algorithm
