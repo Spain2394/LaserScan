@@ -6,7 +6,6 @@ read bagpath
 
 #spawn new terminal for 'rosrun rviz rviz'
 xdotool key ctrl+shift+n
-echo "we are in, but lets keep it quiet"
 
 rosbag play -l $(pwd)/rosbags/$bagpath
 
