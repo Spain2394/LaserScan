@@ -27,10 +27,10 @@ Application of split-and-merge segmentation algorithm
 
 **Merge**
   - If the the two segments are close enough to obtain a common line, find the outer most point
-  - If this point is within the ```/orthog_distance_threshold``` then merge the segments creating the edge of our world
+  - If this point is within the ```orthog_distance_threshold``` then merge the segments creating the edge of our world
   
 **Result**
-  - Resultant lines are published to a new topic ```/extracted_lines``` Composed of a two float32 variables, radius r and angle alpha, for visualization in ```rviz```
+  - Resultant lines are published to a new topic ```extracted_lines``` Composed of a two float32 variables, radius r and angle alpha, for visualization in ```rviz```
 
 **References** 
 1. [course](http://www.cs.mun.ca/~av/courses/4766-current/?page_id=84)
