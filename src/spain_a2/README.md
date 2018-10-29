@@ -23,7 +23,7 @@ Application of split-and-merge segmentation algorithm
 ### Split-and-Merge Segmentation Algorithm
 **Split**
   - Involves fitting points in range ```maximum_range```
-   with at least ```/min_points_per_line```
+   with at least ```min_points_per_line```
 
 **Merge**
   - If the the two segments are close enough to obtain a common line, find the outer most point
