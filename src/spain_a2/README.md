@@ -5,6 +5,7 @@
 Application of split-and-merge segmentation algorithm 
 
 ## To Run display_lines node, and extract_all_lines node
+ - run ```roscore``` in ROS environment
  - download spain_a2 and place in ```catkin_ws```
  - navigate to your ```catkin_ws```, and run ```$ source devel/setup.bash```
  - navigate to package ```spain_a2``` to play a rosbag run ```$ ./viz``` and enter rosbag name when prompted. 
