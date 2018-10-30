@@ -13,10 +13,10 @@ Application of Split-and-Merge Segmentation algorithm
 
 ## Rosbags
 Example rosbags collected using Hokuyo laser scanner in fixed locations rosbags:  
--```corridor1.bag```
--```corridor2.bag```
--```library.bag```
--```stair.bag```
+- ```corridor1.bag```
+- ```corridor2.bag```
+- ```library.bag```
+- ```stair.bag```
 
 ## Testing
  - run ```roslaunch spain_a2 my_stage_rviz.launch``` to visualize in rviz environment
