@@ -6,10 +6,13 @@ Application of Split-and-Merge Segmentation algorithm
 
 ## To Run display_lines node, and extract_all_lines node
  - run ```roscore``` in ROS environment
- - download spain_a2 and place in ```catkin_ws```
+ - download spain_a2 and place in ```catkin_ws/src```
  - navigate to your ```catkin_ws```, and run ```$ source devel/setup.bash```
  - navigate to package ```spain_a2``` to play a rosbag run ```$ ./viz``` and enter rosbag name when prompted. 
  - to start nodes run ```$ roslaunch spain_a2 my_extract_all.launch```
+
+## Rosbags
+
 
 ## Testing
  - run ```roslaunch spain_a2 my_stage_rviz.launch``` to visualize in rviz environment
@@ -18,7 +21,7 @@ Application of Split-and-Merge Segmentation algorithm
  - ```maximum_range``` representing the sensors max range
  - ```min_points_per_line``` minimum point required to fit a line
  - ```orthog_distance_threshold``` threshold used in deciding to split a lane
-
+ 
 ## Observations
 ### Split-and-Merge Segmentation Algorithm
 **Split**
