@@ -34,7 +34,7 @@ Example rosbags collected using Hokuyo laser scanner in fixed locations rosbags:
 
 **Merge**
   - If the the two segments are close enough to obtain a common line, find the outer most point
-  - If this point is within the ```orthog_distance_threshold``` then merge the segments creating the edge of our world
+  - If this point is within the ```orthog_distance_threshold``` then merge the segments creating an edge
   
 **Result**
   - Resultant lines are published to a new topic ```extracted_lines``` Composed of a two float32 variables, radius r and angle alpha, for visualization in ```rviz```
