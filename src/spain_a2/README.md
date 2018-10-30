@@ -12,7 +12,11 @@ Application of Split-and-Merge Segmentation algorithm
  - to start nodes run ```$ roslaunch spain_a2 my_extract_all.launch```
 
 ## Rosbags
-
+Example rosbags collected using Hokuyo laser scanner in fixed locations rosbags:
+-```corridor1.bag```
+-```corridor2.bag```
+-```library.bag```
+-```stair.bag```
 
 ## Testing
  - run ```roslaunch spain_a2 my_stage_rviz.launch``` to visualize in rviz environment
