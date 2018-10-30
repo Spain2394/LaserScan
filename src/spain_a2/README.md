@@ -2,7 +2,7 @@
 ## by Allen Spain
 ## 10/29/2018
 
-Application of split-and-merge segmentation algorithm 
+Application of Split-and-Merge Segmentation algorithm 
 
 ## To Run display_lines node, and extract_all_lines node
  - run ```roscore``` in ROS environment
