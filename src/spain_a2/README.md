@@ -40,7 +40,7 @@ Example rosbags collected using Hokuyo laser scanner in fixed locations rosbags:
   - Resultant lines are published to a new topic ```extracted_lines``` Composed of a two float32 variables, radius r and angle alpha, for visualization in ```rviz```
 
 **References** 
-1. [course](http://www.cs.mun.ca/~av/courses/4766-current/?page_id=84)
-2. [course](http://www.cs.mun.ca/~av/courses/4766-current/?page_id=103)
+1. [COMP 4766/6912, Spring 2018](http://www.cs.mun.ca/~av/courses/4766-current/?page_id=84)
+2. [COMP 4766/6912, Spring 2018](http://www.cs.mun.ca/~av/courses/4766-current/?page_id=103)
 
 
